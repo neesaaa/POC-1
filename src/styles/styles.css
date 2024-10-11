@@ -1,0 +1,24 @@
+div {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+  input {
+    margin: 10px 0;
+  }
+  button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
