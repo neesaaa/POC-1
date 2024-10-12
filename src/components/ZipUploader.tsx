@@ -1,3 +1,5 @@
+import "./ZipUploader.css"; // Import the new CSS file
+
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 const ZipUploader: React.FC = () => {
@@ -6,11 +8,20 @@ const ZipUploader: React.FC = () => {
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedFile = event.target.files?.[0];
-    if (selectedFile && selectedFile.type === "application/zip") {
-      setFile(selectedFile);
-      setError("");
+    console.log(selectedFile); // Log the selected file object for debugging
+    if (selectedFile) {
+      console.log("File type:", selectedFile.type); // Check the file type
+      if (
+        selectedFile.type === "application/zip" ||
+        selectedFile.type === "application/x-zip-compressed"
+      ) {
+        setFile(selectedFile);
+        setError("");
+      } else {
+        setError("Please select a valid ZIP file.");
+      }
     } else {
-      setError("Please select a valid ZIP file.");
+      setError("No file selected.");
     }
   };
 
@@ -25,7 +36,7 @@ const ZipUploader: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="zip-uploader">
       <h2>Upload a ZIP file</h2>
       <form onSubmit={handleSubmit}>
         <input type="file" accept=".zip" onChange={handleFileChange} />

@@ -1,0 +1,34 @@
+.zip-uploader {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .zip-uploader input {
+    margin: 10px 0;
+  }
+    
+  .zip-uploader h2{
+    color: #ddd;
+  }
+  .zip-uploader input{
+    color: #ddd;
+  }
+  
+  .zip-uploader button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .zip-uploader button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  

@@ -1,24 +1,44 @@
-div {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    max-width: 400px;
-    text-align: center;
-  }
-  input {
-    margin: 10px 0;
-  }
-  button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
-  }
-  
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html, body {
+  height: 100%; 
+  margin: 0;
+  color:#ddd;
+  background-color: #17153B;
+
+}
+
+.header {
+  display: flex; 
+  align-items: center; 
+}
+
+.logo {
+  width: 250px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+
+input {
+  margin: 10px 0;
+}
+
+.app-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: #17153B; 
+
+}
+.app-container h1{
+  color:#ddd;
+}
+
